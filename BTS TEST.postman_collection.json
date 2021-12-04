@@ -1,0 +1,1103 @@
+{
+	"info": {
+		"_postman_id": "5a0eca8e-046e-42e8-852e-50d0be0ef95a",
+		"name": "BTS TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "USERS",
+					"item": [
+						{
+							"name": "Sign Up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "jhondoe",
+											"description": "required|string|min:5|max:50|unique:users",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"description": "required|string|min:6",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jhondoe@gmail.com",
+											"description": "required|string|email|max:200|unique:users",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "08129121212",
+											"description": "required|numeric|digits_between:8,20|unique:users",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "Indonesia",
+											"description": "required|string|min:3|max:100",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "Tangerang",
+											"description": "required|string|min:3|max:100",
+											"type": "text"
+										},
+										{
+											"key": "postcode",
+											"value": "15810",
+											"description": "required|string|max:20",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jhon Doe ",
+											"description": "required|string|min:1|max:255",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Tangerang",
+											"description": "required|string",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users/signup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Sign Up",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "username",
+													"value": "jhondoe",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "secret",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "jhondoe@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "phone",
+													"value": "08129121212",
+													"type": "text"
+												},
+												{
+													"key": "country",
+													"value": "Indonesia",
+													"type": "text"
+												},
+												{
+													"key": "city",
+													"value": "Tangerang",
+													"type": "text"
+												},
+												{
+													"key": "postcode",
+													"value": "15810",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "Jhon Doe ",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "Tangerang",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/users/signup",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"users",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:44:06 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:44:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.23"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"email\": \"jhondoe@gmail.com\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTU4NmEwNDlmZDJiMmMzM2Y4YzMxOTIzMDViNTA0NGQzMTQ0MjA3MDc3NjcwZjM5MWViNzJmZDkwZjQ2NmVmYTQ1NzdkZmUwOGE0ZWMyNzMiLCJpYXQiOjE2Mzg2MDc0NDYuMzIwMjE4LCJuYmYiOjE2Mzg2MDc0NDYuMzIwMjIzLCJleHAiOjE2NTQzMzIyNDYuMzE1ODI3LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.SfEkuH--gWCEtqLhY1aMpKWLWhyMOph9-y_5W0Q9JVJ-MW9tXWStFD1MaN_rYlh3K-0UpQi-jFmVxV3W02G2zuRsWHXbMfKQFFo_TpmYaatK7MWEWgYKc-fp8-o268KJTxpxomapPZn38-PrZ44-XCid7coyRV5eSQ5moUdGmazuKM59Re1quDOa5YmX-TpQw9vV-WICViyrJfR8GA7FHwwzspHrbYSRSmoWPViHOeBw4sAtr-rf0IAubOFI0h6M9JNVZ8-TTRs-udYno52zfXwmGEPQzrPqVGH-Et-q-5TZZyFejdtXNDs4nBbaJMVbd2tdtS49bu-otHDYc7IpfpCR0XZcyn8VKkrNDUJYCTbvsUYzA5MKplwmbEy2fB-jj_RyfFlBm1-22PvJPqp0sPGOATr3-3YVGYD8Tm9zMxs5EEdtraRR0Q37krAYjbzRYSsJJFlimpds6BP4Z__Bb6V9XO6Cz8kJRIvrmblPBv7g-oz9CqOYWf47ETDqAXoiPAxJOXkVg_gnJq6llNg-qjGKDYaWCGf5cLvil-ts8-jJmHba2gjeNrzrqmceYu-VUrFX_ZcCA7-zdwwu164_UQt9DYJhEQrGGZEO8bN53M-6B6b9-kxiGcFylDVRj1wgUPo72bEO4jspxFo1bIc8CzvTYO3NTb-whMuLBTE8Yo8\",\n        \"username\": \"jhondoe\"\n    },\n    \"message\": \"Account registered successfully!\",\n    \"status\": \"success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Sign In",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var data = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"token\", data.data.token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "jhondoe@gmail.com",
+											"description": "required|string|exists:users",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"description": "required|string",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/users/signin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"signin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Sign In",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "email",
+													"value": "jhondoe@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "secret",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/api/users/signin",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"users",
+												"signin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:50:59 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:50:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.23"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"email\": \"jhondoe@gmail.com\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOTE1OWJmNWZjMzQ0MjczNWViNjk4NzNhZmVmM2ZiOGM1NmQzNWFiMjdiOTZmYjMwNGZhYWMwNWI5MmQ0OWQzYzZkOTExMDE2NzI4NmFlZWUiLCJpYXQiOjE2Mzg2MDc4NTkuNTI0NjMyLCJuYmYiOjE2Mzg2MDc4NTkuNTI0NjQ1LCJleHAiOjE2NTQzMzI2NTkuNTIwNTU3LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.hdLlGFt8H_usEC1dFsYkHaBLBZAnZUAbl6IqrsG3cJb_GJpvVJabtLVPNVXs1cK6u0bUw7IKMVz6V4h02YFBo4b1IrGxM3XujRfAQxDkRXLSi0YNrsfTyslQmGCiL5gqtTVjWjukMqDtAXwALktKkY6k3WSR9O690gtks5MW9_ef4u1g9uPo8MSoWjWTEhZA0v2O6gdFApDljuJ60ZeDPw6sfkn1lcxtuKkdMfkxqOLS0q9N0r_xMX6L3W7OYBimMxzPRXkBDiV3XhyHQkvQAZxPhCFjWHYcVhTGm3_HbRwbGU4jwoKdnIahM9bHasf6zGemeZP0XbO5H26DCxy-RN-bQoAh4aiIhHGGRz4CjrmtAcCx1P0pKESgBUj9dSKQxI1ePohlrx3tsTdqAJf7VNzBy3OHn4-tAUzQhh42PW0_BaLm_RBVRS9My0o29CsU-cCUnTAWWt7v7AiYMoM6k-nKNZFtt6vaWzmYelkdkNUGIepLwnGrf3WPsfUa2L3qVDtpZwQS3LjUghTMuxlhRbyZCeTwDPy9YM2x58Rk_6olTpMdq4SUSa1OT3u_ES1nkmDJgI1kjGT8Yik2qJifJeCDlI-11UpE3J2GLRYoAa2dXHF9jEPBsnBVoHM_dTyDTfPRO80tny9Gn72GhES5Kskmr2CutFhSqvTZpClscLw\",\n        \"username\": \"jhondoe\"\n    },\n    \"status\": true,\n    \"message\": \"Login successfully\",\n    \"code\": 200\n}"
+								}
+							]
+						},
+						{
+							"name": "Get List User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get List User",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/users",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:54:55 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 08:54:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.23"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"code\": 401\n}"
+								},
+								{
+									"name": "Get List User",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/users",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 09:05:13 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Dec 2021 09:05:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.23"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 6,\n            \"username\": \"jhondoe\",\n            \"email\": \"jhondoe@gmail.com\",\n            \"phone\": \"08129121212\",\n            \"country\": \"Indonesia\",\n            \"city\": \"Tangerang\",\n            \"postcode\": \"15810\",\n            \"name\": \"Jhon Doe\",\n            \"address\": \"Tangerang\"\n        }\n    ],\n    \"message\": \"Success\",\n    \"status\": \"success\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Shopping",
+			"item": [
+				{
+					"name": "Get All Shopping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/shopping",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shopping"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get List Shopping",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/shopping",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:22:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:22:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Macbook\",\n            \"CreatedDate\": \"2021-12-04\"\n        }\n    ],\n    \"message\": \"Success\",\n    \"status\": \"success\"\n}"
+						},
+						{
+							"name": "Get List Shopping",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/shopping",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:24:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:24:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Macbook Pro\",\n            \"CreatedDate\": \"2021-12-04\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Macbook\",\n            \"CreatedDate\": \"2021-12-04\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Macbook\",\n            \"CreatedDate\": \"2021-12-03\"\n        }\n    ],\n    \"message\": \"Success\",\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Shopping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "createddate",
+									"value": "2021-12-03",
+									"description": "required|date",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Macbook ",
+									"description": "required|string|min:3|max:200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/shopping",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shopping"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New Shopping",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "createddate",
+											"value": "2021-12-04",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Macbook ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/shopping",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:16:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:16:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"CreatedDate\": \"2021-12-04\",\n        \"name\": \"Macbook\",\n        \"id\": 1\n    },\n    \"message\": \"Success\",\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Shopping By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/shopping/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shopping",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Id Shopping",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/shopping/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping",
+										"1"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:16:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:16:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Macbook\",\n        \"CreatedDate\": \"2021-12-04\"\n    },\n    \"message\": \"Success\",\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Shopping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "createddate",
+									"value": "2021-12-04",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Macbook Pro",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/shopping/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shopping",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Shopping",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "createddate",
+											"value": "2021-12-04",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Macbook Pro",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/shopping/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:25:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:25:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Macbook Pro\",\n        \"CreatedDate\": \"2021-12-04\"\n    },\n    \"message\": \"Shopping updated successfully\",\n    \"status\": \"success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Shopping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjk2MjdkODIxZGQyMmQ0ZGVhOTJiMzgzZWE3ODhlM2UzZmJmZTQzYzE0NmM1Y2YzNWNhNWUyYmFiMDMxYjI4YWMxNjQ0NTg3YmRkMzZhZjkiLCJpYXQiOjE2Mzg2MDgzNjQuNjc1NTk2LCJuYmYiOjE2Mzg2MDgzNjQuNjc1NjAxLCJleHAiOjE2NTQzMzMxNjQuNjcwODI0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.lKRo6EpUl9zZ5aZ1hIF9zT3qMjH-vhFUjFL2FYrb03Mfr_2k87M1XWgOWiMPqYJUAsxX6CIPcWedw0m5-zt_dA-uLKdockhFgevUgexaT2MievI-430VYcHOYfVDPrEqg7KjhzI_-T7Himr0oStvnTsVeBiIonfYI6JHYVF8G_5oD7cYwN55gbf6tXfT7QE74ICCYEUG-G1gz4n-rlc8XmLIrk28NA8NYcDkJnyEmjoa2zHRx5TlR8j8L1fuBkixBCNCNuJqJawipe-n9UjfKkJaTS6Ui7nl9p--Q00fP1fa2LEvjgy6zcfFZgKVvH1Mh4qIM6Ohu3LSMOQmT0o6HlHAm1d5WWKfM8D52UJynXIP42jrduDZr0H5A1SvCTZDiVCOG-pSuirTHX3K8wKTTJD3ZYanxvn3wM76UUI25sI53wvtmWmMm5fj-fypI5ONweQ9lrzNDS7KIEFiNkneICeB4Vui5SSUdQFG2z-uzvhNYaQf-xZyZtWHGI6GhXT5aovayUM-qAdx7VHrgqyrdL_tQAVT-jQVnQd3SGqDxBlB4ECENP7PbgzRDPAZmPjboss-Id1E8N6YWwk1Hjkl6hlgyV-7NIMyfDN5G1jnHrbb6hOfYKaEQqzRrs2eJHWQWtJDWWt3BeoKm7TdfrdaSLGZ_Bm7NgST3ty_ZaVCWlg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/shopping/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"shopping",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Shopping",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/shopping/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"shopping",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:25:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 Dec 2021 09:25:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Macbook\",\n        \"CreatedDate\": \"2021-12-04\"\n    },\n    \"message\": \"Shopping deleted successfully\",\n    \"status\": \"success\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

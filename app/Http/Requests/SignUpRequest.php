@@ -32,7 +32,7 @@ class SignUpRequest extends FormRequest
             'city' => 'required|string|min:3|max:100',
             'postcode' => 'required|string|max:20',
             'name' => 'required|string|min:1|max:255',
-            'address' => 'required|string|min:3|max:100',
+            'address' => 'required|string',
         ];
     }
 }
